@@ -55,28 +55,3 @@ restartBtn.addEventListener("click", () => {
   gamePlayer.winner = null;
   playerElement.textContent = "";
 });
-function checkWinner() {
-  const winningCombinations = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-  ];
-  winningCombinations.forEach((combination) => {
-    const [a, b, c] = combination;
-    if (buttons[a].textContent && buttons[a].textContent === buttons[b].textContent && buttons[a].textContent === buttons[c].textContent) {
-      gamePlayer.winner = buttons[a].textContent;
-      playerElement.textContent = `${gamePlayer.winner} player wins!`;
-      buttons.forEach((btn) => {
-        btn.disabled = true;
-      });
-    }
-  });
-  if (![...buttons].some((btn) => btn.textContent === "") && !gamePlayer.winner) {
-    playerElement.textContent = "It's a tie!";
-  }
-}
