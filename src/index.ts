@@ -1,16 +1,16 @@
-// import {
-//   nextPlayerElement,
-//   playerElement,
-//   buttons,
-//   restartBtn,
-//   gameSteps,
-// } from "./elements";
-// import { type Player } from "./types";
+import {
+  nextPlayerElement,
+  playerElement,
+  buttons,
+  restartBtn,
+  gameSteps,
+} from "./elements";
+import { type Player } from "./types";
 
-// const gamePlayer = {
-//   current: "x",
-//   winner: null,
-// };
+const gamePlayer = {
+  current: "x",
+  winner: null,
+};
 
 
 
