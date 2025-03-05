@@ -1,0 +1,22 @@
+{
+  "name": "x_and_0_game_projectts",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev:tailwind": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./build/index.css --watch",
+    "dev:ts": "bun build --watch --outfile=./build/index.js ./src/index.ts"
+    
+    
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.0.6",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.0.6"
+  }
+}
