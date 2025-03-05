@@ -46,3 +46,12 @@ buttons.forEach((btn, idx) => {
     gameSteps.append(stepWrapper);
   });
 });
+restartBtn.addEventListener("click", () => {
+  buttons.forEach((button) => {
+    button.textContent = "";
+    gameSteps.textContent = "";
+    button.disabled = false;
+  });
+  gamePlayer.winner = null;
+  playerElement.textContent = "";
+});

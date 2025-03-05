@@ -18,7 +18,7 @@ buttons.forEach((btn, idx) => {
   btn.addEventListener("click", (e) => {
     const button = e.target as HTMLButtonElement;
 
-    if (button.textContent === "") {
+    if (button.textContent === "") { 
       button.textContent = gamePlayer.current;
 
       gamePlayer.current = gamePlayer.current === "x" ? "o" : "x";
@@ -75,16 +75,16 @@ buttons.forEach((btn, idx) => {
 
 
 
-// restartBtn.addEventListener("click", () => {
-//   buttons.forEach((button) => {
-//     button.textContent = "";
-//     gameSteps.textContent = "";
-//     button.disabled = false;
-//   });
+restartBtn.addEventListener("click", () => {
+  buttons.forEach((button) => {
+    button.textContent = "";
+    gameSteps.textContent = "";
+    button.disabled = false;
+  });
 
-//   gamePlayer.winner = null;
-//   playerElement.textContent = "";
-// });
+  gamePlayer.winner = null;
+  playerElement.textContent = "";
+});
 
 // function checkWinner() {
 //   const winningCombinations = [
